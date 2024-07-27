@@ -205,7 +205,32 @@ export default function MatchDetails() {
         <View className="bg-[#ffffff] rounded-lg">
           <View className="p-2 px-4 space-y-4">
             <Text className="text-xl font-bold">About the event</Text>
-            <View></View>
+            <View className="space-y-4">
+              <View className="flex-row space-x-6">
+                <View className="flex-1">
+                  <Text className=" text-xs">Traders</Text>
+                  <Text className="font-semibold">₹ 47.12K</Text>
+                </View>
+                <View className="flex-1">
+                  <Text className=" text-xs">Volume</Text>
+                  <Text className="font-semibold">₹ 9.9L</Text>
+                </View>
+              </View>
+              <View className="flex-row space-x-6">
+                <View className="flex-1">
+                  <Text className=" text-xs">Started at</Text>
+                  <Text className="font-semibold text-xs">
+                    June 19, 2024 3:40PM
+                  </Text>
+                </View>
+                <View className="flex-1">
+                  <Text className=" text-xs">Ending at</Text>
+                  <Text className="font-semibold text-xs">
+                    June 19, 2024 3:40PM
+                  </Text>
+                </View>
+              </View>
+            </View>
           </View>
 
           <View style={styles.divider} />

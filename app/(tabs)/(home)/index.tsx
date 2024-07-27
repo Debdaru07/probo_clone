@@ -8,6 +8,14 @@ import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaFrame } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import { ModalView } from "@/components/Modal";
+import Cricket from "@/assets/svgs/Cricket";
+import Bitcoin from "@/assets/svgs/Bitcoin";
+import Football from "@/assets/svgs/Football";
+import Stocks from "@/assets/svgs/Stocks";
+import Economy from "@/assets/svgs/Economy";
+import Basketball from "@/assets/svgs/Basketball";
+import Youtube from "@/assets/svgs/Youtube";
+import Chess from "@/assets/svgs/Chess";
 
 const matchData = [
   {
@@ -45,63 +53,81 @@ const matchData = [
 const verticleTileData = [
   {
     title: "Cricket",
+    icon: <Cricket />,
   },
   {
     title: "Crypto",
+    icon: <Bitcoin />,
   },
   {
     title: "Football",
+    icon: <Football />,
   },
   {
     title: "Stocks",
+    icon: <Stocks />,
   },
   {
     title: "Economy",
+    icon: <Economy />,
   },
   {
     title: "Basketball",
+    icon: <Basketball />,
   },
   {
     title: "Youtube",
+    icon: <Youtube />,
   },
   {
     title: "Chess",
+    icon: <Chess />,
   },
 ];
 
 const horizontalTileData1 = [
   {
     title: "KOL v/s MUMB",
+    icon: <Cricket />,
   },
   {
     title: "PSG v/s DORTMUND",
+    icon: <Football />,
   },
   {
     title: "KOL v/s MUMB",
+    icon: <Cricket />,
   },
   {
     title: "Bitcoin",
+    icon: <Bitcoin />,
   },
   {
     title: "Growth",
+    icon: <Stocks />,
   },
 ];
 
 const horizontalTileData2 = [
   {
     title: "Bitcoin",
+    icon: <Bitcoin />,
   },
   {
     title: "Growth",
+    icon: <Stocks />,
   },
   {
     title: "PSG v/s DORTMUND",
+    icon: <Football />,
   },
   {
     title: "KOL v/s MUMB",
+    icon: <Cricket />,
   },
   {
     title: "PSG v/s DORTMUND",
+    icon: <Football />,
   },
 ];
 
@@ -139,7 +165,7 @@ export default function HomeScreen() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {verticleTileData.map((tile, index) => (
           <View key={index} className="mx-2">
-            <VerticleTileRender title={tile.title} />
+            <VerticleTileRender title={tile.title} icon={tile.icon} />
           </View>
         ))}
       </ScrollView>
@@ -148,21 +174,23 @@ export default function HomeScreen() {
         <Text className="font-bold">Trending Now</Text>
       </View>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        className=""
-      >
-        {horizontalTileData1.map((tile, index) => (
-          <View key={index} className="mx-2">
-            <HorizontalTileRender title={tile.title} />
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <View>
+          <View style={{ flexDirection: "row" }}>
+            {horizontalTileData1.map((tile, index) => (
+              <View key={`row1-${index}`} style={{ marginHorizontal: 8 }}>
+                <HorizontalTileRender title={tile.title} icon={tile.icon} />
+              </View>
+            ))}
           </View>
-        ))}
-        {horizontalTileData2.map((tile, index) => (
-          <View key={index} className="mx-2">
-            <HorizontalTileRender title={tile.title} />
+          <View style={{ flexDirection: "row", marginTop: 10 }}>
+            {horizontalTileData2.map((tile, index) => (
+              <View key={`row2-${index}`} style={{ marginHorizontal: 8 }}>
+                <HorizontalTileRender title={tile.title} icon={tile.icon} />
+              </View>
+            ))}
           </View>
-        ))}
+        </View>
       </ScrollView>
 
       <View className="px-2.5">

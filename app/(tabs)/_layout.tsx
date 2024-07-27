@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs } from "expo-router";
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import Trophy from "@/assets/svgs/Trophy";
 
 export default function TabLayout() {
   return (
@@ -13,10 +14,10 @@ export default function TabLayout() {
         name="(home)"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <TabBarIcon
               name={focused ? "home" : "home-outline"}
-              color={color}
+              color={"#000000"}
             />
           ),
         }}
@@ -25,10 +26,10 @@ export default function TabLayout() {
         name="search"
         options={{
           title: "Search",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <TabBarIcon
               name={focused ? "search" : "search-outline"}
-              color={color}
+              color={"#000000"}
             />
           ),
         }}
@@ -37,10 +38,11 @@ export default function TabLayout() {
         name="sports"
         options={{
           title: "Sports",
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "home" : "home-outline"}
-              color={color}
+          tabBarIcon: ({ focused, color, size }) => (
+            <Trophy
+              width={size}
+              height={size}
+              fill={focused ? color : "#8E8E8F"} // Use a different color for unfocused state
             />
           ),
         }}
@@ -49,10 +51,10 @@ export default function TabLayout() {
         name="portfolio"
         options={{
           title: "Portfolio",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <TabBarIcon
               name={focused ? "bag-remove" : "bag-remove-outline"}
-              color={color}
+              color={"#000000"}
             />
           ),
         }}
@@ -61,10 +63,10 @@ export default function TabLayout() {
         name="wallet"
         options={{
           title: "Wallet",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <TabBarIcon
               name={focused ? "wallet" : "wallet-outline"}
-              color={color}
+              color={"#000000"}
             />
           ),
         }}
