@@ -20,6 +20,11 @@ export default function TabLayout() {
               color={"#000000"}
             />
           ),
+          tabBarLabelStyle: {
+            color: "#000000",
+          },
+          tabBarActiveTintColor: "#000000",
+          tabBarInactiveTintColor: "#000000",
         }}
       />
       <Tabs.Screen
@@ -32,6 +37,11 @@ export default function TabLayout() {
               color={"#000000"}
             />
           ),
+          tabBarLabelStyle: {
+            color: "#000000",
+          },
+          tabBarActiveTintColor: "#000000",
+          tabBarInactiveTintColor: "#000000",
         }}
       />
       <Tabs.Screen
@@ -42,9 +52,15 @@ export default function TabLayout() {
             <Trophy
               width={size}
               height={size}
-              fill={focused ? color : "#8E8E8F"} // Use a different color for unfocused state
+              fill={focused ? color : "#8E8E8F"}
             />
           ),
+          tabBarLabelStyle: {
+            color: "#000000",
+          },
+
+          tabBarActiveTintColor: "#000000",
+          tabBarInactiveTintColor: "#000000",
         }}
       />
       <Tabs.Screen
@@ -57,6 +73,11 @@ export default function TabLayout() {
               color={"#000000"}
             />
           ),
+          tabBarLabelStyle: {
+            color: "#000000",
+          },
+          tabBarActiveTintColor: "#000000",
+          tabBarInactiveTintColor: "#000000",
         }}
       />
       <Tabs.Screen
@@ -69,6 +90,11 @@ export default function TabLayout() {
               color={"#000000"}
             />
           ),
+          tabBarLabelStyle: {
+            color: "#000000",
+          },
+          tabBarActiveTintColor: "#000000",
+          tabBarInactiveTintColor: "#000000",
         }}
       />
     </Tabs>

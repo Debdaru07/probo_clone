@@ -49,7 +49,7 @@ export default function MatchDetails() {
   const { setModalVisible } = useContext(AppContext);
   return (
     <ScrollView
-      className="pt-10 space-y-4 px-2.5"
+      className="space-y-4 px-2.5"
       showsVerticalScrollIndicator={false}
       contentContainerStyle={{
         minHeight: screenHeight,
@@ -58,7 +58,7 @@ export default function MatchDetails() {
     >
       <ModalView />
       <View className="flex-row justify-between  items-center">
-        <Pressable className=" p-2" onPress={() => route.back()}>
+        <Pressable className=" px-2" onPress={() => route.back()}>
           <IconRender name="arrow-back-outline" />
         </Pressable>
         <IconRender name="share-social-outline" />

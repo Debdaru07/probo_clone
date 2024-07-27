@@ -138,7 +138,7 @@ export default function HomeScreen() {
   const screenHeight = dimensions.height - tabBarHeight;
   return (
     <ScrollView
-      className="pt-10 space-y-4"
+      className="space-y-4"
       contentContainerStyle={{
         minHeight: screenHeight,
         paddingBottom: tabBarHeight,
@@ -146,10 +146,10 @@ export default function HomeScreen() {
     >
       <ModalView />
       <View className="flex-row justify-between px-2.5">
-        <View className="rounded-full bg-[#EAECF0] p-2">
+        <View className="rounded-full bg-[#EAECF0] p-2 pt-0">
           <IconRender name="person-outline" />
         </View>
-        <View className="rounded-full p-2 bg-[#F9FAFB]">
+        <View className="rounded-full p-2 pt-0 bg-[#F9FAFB]">
           <IconRender name="notifications-outline" />
         </View>
       </View>
